@@ -13,7 +13,7 @@
   <body>
     <div class="container">
       <header>
-        {% if user.is_authenticated() %}
+        {% if user and user.is_authenticated() %}
           <span>Hello, {{ user.email }}!</span>
           {{ browserid_logout() }}
         {% else %}
